@@ -5,11 +5,27 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 img{
     max-width: 100%;
 }
-.appContainer{
-    display: flex;
+
+h1, h2, h3, h4{
+    margin: 0;
+    padding: 0;
+}
+button{
+    background: transparent;
+    border: 1px solid black;
+    transition: 0.1s;
+    &:hover{
+        background: gold;
+    }
+}
+
+.hidden{
+    display: none;
 }
 
 main{   
     display: flex;
-    width: 70%;
+    justify-content: space-around;
 }
+
+
