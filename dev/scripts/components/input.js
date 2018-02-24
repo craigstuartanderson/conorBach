@@ -13,6 +13,7 @@ export default class Input extends React.Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.logPost = this.logPost.bind(this);
+        this.cancelPost = this.cancelPost.bind(this);
     }
     
     handleChange(e){
@@ -49,31 +50,31 @@ export default class Input extends React.Component {
         })
 
     }
+    
+    cancelPost(){
+        const modal = document.getElementById('modalForm');
+        modal.style.display = 'none';
+    }
 
 
     render(){
         return(
             <div className="inputModal">
-                <form onSubmit={this.logPost} id="modalForm">
+                <form id="modalForm">
                     <div className="formContainer">
+                        <h2>Share Something With The Group</h2>
                         <div className="entryBox">
-                            <label className="inputLabel" htmlFor="user">User</label>
+                            <label className="inputLabel" htmlFor="user">Great Friend</label>
                             <input name="user" type="text" onChange={this.handleChange} value={this.state.user} />
                         </div>
                         <div className="entryBox">
-                            <label className="inputLabel" htmlFor="bodyText">Comment</label>
+                            <label className="inputLabel" htmlFor="bodyText">Message</label>
                             <textarea name="bodyText" id="" cols="30" rows="10" onChange={this.handleChange} value={this.state.bodyText}></textarea>
                         </div>
-                        {/* <div className="entryBox">
-                            <label className="inputLabel" htmlFor="photo">Paste photo URL</label>
-                            <input name="photo" type="text" onChange={this.handleChange} value={this.state.photo} />
-                        </div> */}
-                        <select name="commentType" onChange={this.handleChange} value={this.state.commentType}>
-                            <option value="./public/images/prediction.png">Prediction</option>
-                            <option value="./public/images/suggestion.png">Suggestion</option>
-                            <option value="./public/images/request.png">Request</option>
-                        </select>
-                        <button>Post</button>
+                        <div className="modalButtons">
+                            <button onClick={this.logPost}>Post</button>
+                            <button onClick={this.cancelPost}>Cancel</button>
+                        </div>
                     </div>
                 
                 </form>

@@ -1,16 +1,20 @@
 import React from 'react';
+import Remove from './remove.js';
 
 
 export default class Comment extends React.Component{
     constructor(){
         super();
         this.state = {
-
+            key: ''
         }
-        this.removeComment = this.removeComment.bind(this);
     }
-    removeComment(){
-        dbRef = firebase.database().ref()
+    
+    componentDidMount(){
+        const newKey = this.props.commentKey
+        this.setState({
+            key: newKey
+        })
     }
 
     render(){
@@ -24,7 +28,7 @@ export default class Comment extends React.Component{
                     <p>{this.props.bodyText}</p>
                     <h6>{this.props.date}</h6>
                 </div>
-                <button onClick={this.removeComment}>Remove</button>
+                <Remove removeKey={this.state.key} />
             </div>
         )
     }

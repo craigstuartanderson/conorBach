@@ -31,10 +31,7 @@
     padding: 10px;
     margin: 10px;
     background: white;
-    button{
-        margin: 40px 0;
-        width: 15%;
-    }
+    
 }
 .commentTitle{
     display: flex;
@@ -45,4 +42,29 @@
 }
 .commentContent{
     width: 70%;
+}
+.removeContainer{
+    position: relative;
+    button{
+        margin: 40px 45px; 
+        width: 70px;
+    }
+}
+.removeCheck{
+    // position: absolute;
+    // top:0;
+    // right:0;
+    display: none;
+
+}
+.checkButtons{
+    display: flex;
+    justify-content: space-between;
+    button{
+        width: 70px;
+        margin: 40px 0 40px 10px;
+    }
+}
+#cancelButton{
+    box-shadow: 2px 2px gold, -2px -2px gold;
 }

@@ -64,8 +64,15 @@ export default class App extends React.Component {
       // user clicks the add button, triggering a modal. Opening up our Input component
     showModal(commentType) {
       const modal = document.getElementById('modalForm');
-      modal.style.display = 'block';
+      modal.style.display = 'flex';
 
+    }
+    removeComment(comment) {
+      const dbRef = firebase.database().ref(comment.key);
+      dbRef.remove();
+    }
+    getKey(key){
+      return key
     }
     render() {
       return (
@@ -80,7 +87,6 @@ export default class App extends React.Component {
             </div> 
           </header>
           <Input />
-          <Remove />
           <main>
             <Aside />
             <section className="wall">
@@ -91,7 +97,8 @@ export default class App extends React.Component {
               {this.state.feed.map((post) => {
                 return(
                   <Comment 
-                  key={post.key} 
+                  key={post.key}
+                  commentKey={post.key} 
                   date={post.date}
                   user={post.user}
                   bodyText={post.bodyText}
