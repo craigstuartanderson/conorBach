@@ -74,6 +74,10 @@ export default class App extends React.Component {
     getKey(key){
       return key
     }
+    showAside(){
+      const aside = document.getElementById('aside');
+      aside.style.left = '0';
+    }
     render() {
       return (
         <div className="appContainer">
@@ -88,7 +92,10 @@ export default class App extends React.Component {
           </header>
           <Input />
           <main>
-            <Aside />
+            <Aside id="aside" />
+            <div className="popMenu">
+              <button onClick={this.showAside}></button>
+            </div>
             <section className="wall">
               <div className="wallTitle">
                 <h2>Suggestions / Requests / Predictions</h2>

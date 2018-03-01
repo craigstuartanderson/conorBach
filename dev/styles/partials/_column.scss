@@ -31,16 +31,27 @@
     padding: 10px;
     margin: 10px;
     background: white;
+    h3{
+        font-style: italic;
+        border-bottom: 2px solid gold;
+    }
+    p{
+        font-size: 0.8rem;
+    }
     
 }
 .commentTitle{
     display: flex;
+    // align-items: center;
+    justify-content: center;
     width: 15%;
     img{
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 }
 .commentContent{
+    margin: 10px;
     width: 70%;
 }
 .removeContainer{

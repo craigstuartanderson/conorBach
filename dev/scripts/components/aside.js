@@ -53,11 +53,12 @@ export default class Header extends React.Component{
             <aside>
                 <div className="asideBlock countdown">
                     <h3>Countdown</h3>
+                    <h5>Until 4/20</h5>
                     <h1>{this.state.countdown}</h1>
                     <h4>days</h4>
                 </div>
                 <div className="asideBlock weather">
-                    <h3>Current Weather</h3>
+                    <h3>Weather</h3>
                     <h5>Blue Mountain, ON</h5>
                     <h1>{this.state.weather.temp}c</h1>
                     <h4>{this.state.weather.desc}</h4>
