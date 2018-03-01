@@ -25,15 +25,27 @@
     }
     aside{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .asideBlock{
+            width: 45%;
     }
     .wall{
         width: 100%;
+    }
+    .formContainer{
+        width: 80%;
+        input, textarea{
+            border: 1px solid black;
+        }
     }
 
 }
 
 @media(max-width: 480px){
     header{
+        height: 100vh;
         flex-direction: column;
         h1{
             font-size: 2.4rem;
@@ -45,15 +57,30 @@
     .title{
         padding: 10px;
     }
+    .mobileTitle{
+        display: block;
+    }
     aside{
+        height: 100vh;
+        border: none;
         flex-wrap: wrap;
         justify-content: space-around;
+        align-items: space-around;
     }
     .asideBlock{
         width: 40%;
+        h1{
+            font-size: 2rem;
+        }
         h3{
             font-size: 0.9rem;
         }
+        h5{
+            font-size: 0.75rem;
+        }
+    }
+    .wall{
+        border: none;
     }
     .wallTitle{
         h2{
@@ -76,6 +103,12 @@
             margin: 0; 
             padding: 2px; 
             width: 60px;
+        }
+    }
+    .formContainer{
+        width: 100%;
+        input, textarea{
+            border: 1px solid black;
         }
     }
 }

@@ -19,7 +19,7 @@ export default class Header extends React.Component{
 
     getDays(){
         const now = new Date().getDate();
-        const daysLeft = (81 - now);
+        const daysLeft = (52 - now);
 
         this.setState({
             countdown: daysLeft
@@ -53,18 +53,18 @@ export default class Header extends React.Component{
             <aside>
                 <div className="asideBlock countdown">
                     <h3>Countdown</h3>
-                    <h5>Until 4/20</h5>
+                    <h5>Until 4/20/18</h5>
                     <h1>{this.state.countdown}</h1>
-                    <h4>days</h4>
+                    <h4>Days</h4>
                 </div>
                 <div className="asideBlock weather">
                     <h3>Weather</h3>
-                    <h5>Blue Mountain, ON</h5>
-                    <h1>{this.state.weather.temp}c</h1>
+                    <h5>Blue Mountain</h5>
+                    <h1>{this.state.weather.temp}°C</h1>
                     <h4>{this.state.weather.desc}</h4>
                 </div>
                 <div className="asideBlock chalet">
-                    <h3>Acommodation</h3>
+                    <h3>Lodging</h3>
                     <a href="https://www.airbnb.ca/rooms/532676?location=Blue%20Mountains%2C%20ON&check_in=2018-04-20&check_out=2018-04-22&s=ynvLNBCG" className="asideLink">
                         <img src="./public/images/request.png" alt="" />
                     </a>
@@ -77,12 +77,19 @@ export default class Header extends React.Component{
                     </a>
                     <h4>Sure</h4>
                 </div>
-                <div className="asideBlock history">
+                <div className="asideBlock news">
                     <h3>Local News</h3>
                     <a href="http://www.bayshorebroadcasting.ca/news_item.php?NewsID=57962" className="asideLink">
                         <img src="./public/images/suggestion.png" alt="" />
                     </a>
                     <h4>Bear Alerts</h4>
+                </div>
+                <div className="asideBlock history">
+                    <h3>Conor</h3>
+                    <a href="https://vimeo.com/1307901" className="asideLink">
+                        <img src="./public/images/conorBald2.png" alt="" />
+                    </a>
+                    <h4>About</h4>
                 </div>
                 {/* <div className="asideBlock localNews">
                     <h3>Local News</h3>

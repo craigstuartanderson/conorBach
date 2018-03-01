@@ -89,12 +89,19 @@ export default class App extends React.Component {
               <h1>A Chalet Weekend</h1>
               <h3>For <span className="nameHighlight">Conor Holler</span> and His Greatest Friends</h3>
             </div> 
+            {/* <div className="popMenu">
+              <button onClick={this.showAside}>Learn</button>
+              <button onClick={this.showWall}>Discuss</button>
+            </div> */}
           </header>
           <Input />
           <main>
-            <Aside id="aside" />
-            <div className="popMenu">
-              <button onClick={this.showAside}></button>
+            <div className="mobileTitle">
+              <h1>Learn</h1>
+            </div>
+            <Aside id="aside"/>
+            <div className="mobileTitle">
+              <h1>Discuss</h1>
             </div>
             <section className="wall">
               <div className="wallTitle">
