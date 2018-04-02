@@ -19,7 +19,7 @@ export default class Header extends React.Component{
 
     getDays(){
         const now = new Date().getDate();
-        const daysLeft = (52 - now);
+        const daysLeft = (20 - now);
 
         this.setState({
             countdown: daysLeft
